@@ -1,0 +1,101 @@
+# 构建/打包/推送日志（统一放到 logs/ 目录，不再散落项目根目录）
+logs/*.log
+logs/*.log.*
+!logs/.gitkeep
+
+# build_multiarch.ps1 运行时注入 (按 FileVersion 生成, 不要提交)
+SedentaryReminder/VersionMarker.cs
+
+# 测试产物
+check_eol.ps1
+WapProjTemplate1/test-output.txt
+WapProjTemplate1/publish-store.ps1
+
+# IDE
+.vs/
+.idea/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+UpgradeLog.htm
+UpgradeLog2.htm
+
+# WapProj 自动生成
+WapProjTemplate1/WapProjTemplate1.assets.cache
+WapProjTemplate1/Package.StoreAssociation.xml
+WapProjTemplate1/split.priconfig.xml
+WapProjTemplate1/split.priconfig.xml.intermediate
+
+# 本地临时目录（解压/签名/loose install 等）
+_*/
+
+# 构建输出
+SedentaryReminder/bin/
+SedentaryReminder/obj/
+WapProjTemplate1/bin/
+WapProjTemplate1/obj/
+WapProjTemplate1/BundleArtifacts/
+WapProjTemplate1/AppPackages/
+# Trae AI 内部工作目录 (禁止公开)
+.trae/
+
+# secrets / tokens
+*.token
+*.secret
+.gitee.token
+.github.token
+
+releases_gitee/
+
+releases_github/
+
+temp_bundle_check/
+
+temp_bundle_check/**/
+
+out-x64/
+
+out-x86/
+
+.vscode/
+
+*.appx
+
+*.appxbundle
+
+*.msix
+
+*.msixbundle
+
+*.7z
+
+*.zip
+
+*.exe
+
+*.dll
+
+*.pdb
+
+*.bak
+
+*.tmp
+
+_uia_probe*.ps1
+
+install_log*.txt
+
+install_dev_log*.txt
+
+休息提示.txt
+
+*搜索词*.txt
+
+!README*.md
+
+!CONCEPT_DICT.md
+
+!PROJECT_FIXLOG.md
+
+!PROJECT_ROADMAP.md
