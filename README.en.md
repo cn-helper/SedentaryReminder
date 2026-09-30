@@ -1,7 +1,7 @@
 # 🛡️ EyeGuard / SedentaryReminder
 
-> Keep your eyes healthy and your posture in check. A lightweight Windows WPF
-> reminder that nudge you to step away from the screen at the right pace.
+> Keep your eyes healthy and your posture in check. A lightweight Windows app
+> that nudges you to step away from the screen at the right pace.
 
 EyeGuard sits quietly in your system tray and keeps you on a healthy rhythm —
 work, then break. It's designed for developers, students, remote workers,
@@ -9,7 +9,7 @@ and anyone spending long hours at a keyboard.
 
 ---
 
-## 📥 Install
+## 📥 Download
 
 | Channel | Link |
 |---|---|
@@ -17,20 +17,16 @@ and anyone spending long hours at a keyboard.
 | GitHub Releases | [Pre-built binaries for x64 / x86](https://github.com/cn-helper/SedentaryReminder/releases) |
 | Gitee (Chinese mirror) | [Gitee Releases](https://gitee.com/helpers/SedentaryReminder/releases) |
 
-> GitHub and Gitee releases are framework-dependent — .NET 8 Desktop Runtime
-> must be installed on the target machine.
-
 ---
 
 ## ✨ Features
 
 ### ⏰ Customizable work / break cycles
-Define your own rhythm: e.g. 45 min work → 3 min break.
-A soft **one-minute pre-break tip** warns you before the screen locks so you
-can wrap up what you're doing.
+Define your own rhythm — e.g. 45 min work → 3 min break. A soft one-minute
+pre-break tip warns you before the screen locks so you can wrap up.
 
 ### 🎮 Smart activity detection
-The timer only runs when mouse or keyboard activity is detected. Idle for
+The timer only runs while mouse or keyboard activity is detected. Idle for
 more than 5 minutes and the counter resets — no need to pause manually
 every time you step away.
 
@@ -38,8 +34,6 @@ every time you step away.
 When break time starts, every connected display is locked together.
 
 ### 🔒 Six lock styles
-Pick what fits your environment:
-
 | Style | What it does |
 |---|---|
 | Transparent | Screen stays visible, input is blocked |
@@ -51,29 +45,20 @@ Pick what fits your environment:
 
 ### 🎯 Five timer modes
 1. **Normal** — continuous timer, break fires every cycle
-2. **Smart** — timer runs only while mouse/keyboard active, resets after 5 min idle
-3. **Full-screen / Game mode** — pauses the timer while a full-screen app is active; exits full-screen → immediate break
-4. **Forced break** — no pre-break tip, no skip, screen locks immediately
-5. **Voice / Win+L** — voice prompt or native Windows lock only, no overlay
+2. **Smart** — runs only while you're active, resets after 5 min idle
+3. **Full-screen / Game** — pauses while a full-screen app is active
+4. **Forced break** — no pre-break tip, no skip
+5. **Voice / Win+L** — voice prompt or native Windows lock only
 
 ### 💤 Sleep timer
-Set the app to shut down your PC automatically at a fixed time, with a
-**full-screen one-minute warning** so you can cancel if needed.
+Shut down your PC automatically at a fixed time, with a one-minute warning.
 
 ### 🌍 Multi-language
-Built-in **Chinese / English** UI, with language switcher in settings.
+Built-in **Chinese / English** UI, switchable in settings.
 
 ### 📊 Live statistics
-Daily work / break minutes, top-5 hours of the day, active ratio — all
-viewable from the tray window.
-
----
-
-## 🛠️ System requirements
-
-- Windows 10 / 11 (64-bit or 32-bit)
-- .NET 8 Desktop Runtime (for GitHub / Gitee releases; Store edition includes it)
-- Microsoft Edge WebView2 Runtime (bundled with most Win11 systems)
+Daily work / break minutes, top hours of the day, active ratio — all from
+the tray window.
 
 ---
 
@@ -81,49 +66,30 @@ viewable from the tray window.
 
 | | |
 |---|---|
-| Desktop floating widget | Settings panel |
-| ![Desktop widget](https://img.haokaikai.cn/2023/09/01/d817345b48557.png) | ![Settings](https://img.haokaikai.cn/2023/09/01/e995130cad8b2.png) |
-| Pre-break reminder | Tray menu (EN) |
-| ![Pre-break tip](https://img.haokaikai.cn/2023/09/01/ac868f7b4d60a.png) | ![Tray menu](https://raw.githubusercontent.com/kaixin1995/EyeGuard/master/SedentaryReminder/Images/tray-en.png) |
+| Desktop floating widget | Tray menu (EN) |
+| ![](./Images/桌面插件.png) | ![](./Images/右键菜单-英文.png) |
+| Pre-break reminder | Tip panel |
+| ![](./Images/休息前提醒.png) | ![](./Images/提示面板.png) |
+| Settings panel (EN) | Settings panel (ZH) |
+| ![](./Images/设置面板-英文.png) | ![](./Images/设置面板.png) |
 
 ---
 
-## 📝 Build from source
+## 🖖 Support the project
 
-```bash
-git clone https://github.com/cn-helper/SedentaryReminder.git
-cd SedentaryReminder
+If EyeGuard helps you stay healthier, a small tip keeps it going!
 
-# Desktop / GitHub release (framework-dependent)
-dotnet publish SedentaryReminder/SedentaryReminder.csproj `
-  -c Release -r win-x64 --self-contained false -o out-x64
-dotnet publish SedentaryReminder/SedentaryReminder.csproj `
-  -c Release -r win-x86 --self-contained false -o out-x86
-```
-
-No solution file is required — the project builds standalone.
-Packaging for Microsoft Store uses the separate `WapProjTemplate1` MSIX bundle.
+![AliPay](./Images/ali-pay.jpg) ![WeChat Pay](./Images/wx-pay.jpg) ![Pay](./Images/pay.png)
 
 ---
 
-## 📝 Versioning
-
-Four-segment `MAJOR.MINOR.PATCH.REVISION`:
-- **REVISION = 0** = local dev build (e.g. `1.1.17.0`)
-- **REVISION > 0** = public release (e.g. `1.1.16.100`)
-
-Microsoft Store store builds use `MAJOR.MINOR.PATCH.0` (4th segment **always 0**, Store convention).
-
----
-
-## 🤝 License & Support
+## 🤝 License & More
 
 | | |
 |---|---|
 | License | MIT |
-| Repository | [cn-helper/SedentaryReminder (GitHub)](https://github.com/cn-helper/SedentaryReminder) |
-| Mirror | [helpers/SedentaryReminder (Gitee)](https://gitee.com/helpers/SedentaryReminder) |
-| Issues | File a bug or feature request on GitHub |
+| Bugs / Features | Open an issue here on GitHub |
+| Gitee (mirror) | [helpers/SedentaryReminder](https://gitee.com/helpers/SedentaryReminder) |
 
 ---
 
